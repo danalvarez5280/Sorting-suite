@@ -1,12 +1,12 @@
 let numNums = [];
 let count = 0;
 
-for (let n = 0; n < 100; n++){
+for (let n = 0; n < 100; n++) {
   let nums = Math.round(Math.random() * (100 - 1) + 1);
   numNums.push(nums);
 }
 
-const insertSort = array => {
+ export const insertSort = array => {
   for (let i = 1; i < array.length; i++) {
     let j = i - 1;
     while ( array[i] < array[j]) {
@@ -15,9 +15,11 @@ const insertSort = array => {
       j = i - 1;
     }
     count++
-    console.log(count)
+    // console.log(count)
   }
   return array
 }
 
 insertSort(numNums)
+
+// module.exports = InsertSort;

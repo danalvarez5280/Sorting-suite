@@ -1,13 +1,12 @@
 let numNums = [];
 let count = 0;
 
-for (let n = 0; n < 100; n++ ){
-  let nums = Mth.floor(Math.random() * (100 - 1) + 1);
+for (let n = 0; n < 100; n++) {
+  let nums = Math.round(Math.random() * (100 - 1) + 1);
   numNums.push(nums)
-
 }
 
-const bubbleSort = array => {
+export const bubbleSort = array => {
   if (Array.isArray(array) && array.length > 0){
     for (let i = array.length - 1; i > 0; i--) {
 
@@ -18,7 +17,7 @@ const bubbleSort = array => {
           [array[j], array[n]] = [array[n], array[j]]
         }
         count++
-        console.log(count)
+        // console.log(count)
       }
     }
     return array
@@ -26,3 +25,6 @@ const bubbleSort = array => {
 }
 
 bubbleSort(numNums)
+// module.exports = bubbleSort;
+
+// export default bubbleSort
